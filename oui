@@ -1,9 +1,0 @@
-#!/bin/bash
-
-DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
-
-#OUI=$(echo ${1//[:.- ]/} | tr "[a-f]" "[A-F]" | egrep -o "^[0-9A-F]{6}")
-OUI=$(echo ${1//[:.- ]/} | tr "[a-f]" "[A-F]" | colrm 7)
-
-#echo $OUI
-grep $OUI $DIR/oui.txt
